@@ -24,4 +24,4 @@ for arg; do [[ ${arg} == develop ]] && /etc/temporal/setup-develop.sh && break ;
 # Run bash instead of Temporal Server if "bash" is passed as an argument (convenient to debug docker image).
 for arg; do [[ ${arg} == bash ]] && bash && exit 0 ; done
 
-exec /etc/temporal/start-temporal.sh
+#exec /etc/temporal/start-temporal.sh
