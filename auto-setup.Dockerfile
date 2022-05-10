@@ -23,4 +23,6 @@ COPY ./docker/auto-setup.sh /etc/temporal/auto-setup.sh
 
 CMD ["autosetup"]
 
-ENTRYPOINT ["/etc/temporal/entrypoint.sh"]
+# CMD ["/etc/temporal/auto-setup.sh"]
+
+# ENTRYPOINT ["/etc/temporal/entrypoint.sh"]

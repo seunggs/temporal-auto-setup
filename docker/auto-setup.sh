@@ -338,4 +338,4 @@ if [[ ${ENABLE_ES} == true ]]; then
 fi
 
 # Run this func in parallel process. It will wait for server to start and then run required steps.
-# setup_server &
+setup_server
