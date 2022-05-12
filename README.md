@@ -14,6 +14,5 @@ A set of pipelines that build:
 Replace **YOUR_TAG** and **YOUR_CHECKOUT_COMMIT** to build manually:
 
 ```bash
-git checkout YOUR_CHECKOUT_COMMIT
-docker build . -f auto-setup.Dockerfile -t temporalio/auto-setup:YOUR_TAG
+docker buildx build --push --platform linux/arm64 --build-arg SERVER_IMAGE=temporaliotest/server:sha-0ab1971 --build-arg ADMIN_TOOLS_IMAGE=temporaliotest/admin-tools:sha-0ab1971 --tag sidetrek/temporal-auto-setup --no-cache . -f auto-setup.Dockerfile
 ```
