@@ -14,5 +14,11 @@ A set of pipelines that build:
 Replace **YOUR_TAG** and **YOUR_CHECKOUT_COMMIT** to build manually:
 
 ```bash
-docker buildx build --push --platform linux/arm64 --build-arg SERVER_IMAGE=temporaliotest/server:sha-0ab1971 --build-arg ADMIN_TOOLS_IMAGE=temporaliotest/admin-tools:sha-0ab1971 --tag sidetrek/temporal-auto-setup --no-cache . -f auto-setup.Dockerfile
+docker build --platform linux/amd64 --build-arg SERVER_IMAGE=temporaliotest/server:sha-0ab1971 --build-arg ADMIN_TOOLS_IMAGE=temporaliotest/admin-tools:sha-0ab1971 --tag sidetrek/temporal-auto-setup --no-cache . -f auto-setup.Dockerfile
+```
+```bash
+docker tag sidetrek/temporal-auto-setup:latest sidetrek/temporal-auto-setup:1.0.2
+```
+```bash
+docker push sidetrek/temporal-auto-setup:1.0.2
 ```
